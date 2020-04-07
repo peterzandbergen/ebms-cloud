@@ -4,7 +4,8 @@
 # defaultEntryPoints = ["https","http"]
 
 [api]
-dashboard = true
+  dashboard = true
+  debug = true
 
 [entryPoints]
   [entryPoints.web]
