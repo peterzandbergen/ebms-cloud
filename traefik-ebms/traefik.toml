@@ -4,7 +4,6 @@ logLevel = "DEBUG"
 defaultEntryPoints = ["https","http"]
 
 [api]
-insecure = true
 dashboard = true
 
 [entryPoints]
