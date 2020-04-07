@@ -12,8 +12,6 @@ dashboard = true
 
   [entryPoints.websecure]
     address = ":443"
-    [entryPoints.websecure.http.tls]
-      certResolver = "myresolver"
 
 # Enable ACME (Let's Encrypt): automatic SSL.
 [certificatesResolvers.myresolver.acme]
