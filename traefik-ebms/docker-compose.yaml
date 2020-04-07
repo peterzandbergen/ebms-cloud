@@ -13,7 +13,7 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - etc-traefik:/etc/traefik
-    container_name: traefik-ebm
+    container_name: traefik-ebms
     labels:
     # Dynamic Configuration
     labels:

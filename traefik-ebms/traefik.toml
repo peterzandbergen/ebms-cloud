@@ -21,8 +21,8 @@ domain = "ebms.myhops.com"
 watch = true
 exposedByDefault = false
 
-[providers.docker]
-defaultRule = "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+# [providers.docker]
+# defaultRule = "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
 
 
 # Enable ACME (Let's Encrypt): automatic SSL.
