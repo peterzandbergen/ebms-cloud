@@ -3,6 +3,9 @@
 # logLevel = "DEBUG"
 # defaultEntryPoints = ["https","http"]
 
+[log]
+  level = "DEBUG"
+
 [api]
   dashboard = true
   debug = true
@@ -15,11 +18,11 @@
     address = ":443"
 
 # Enable ACME (Let's Encrypt): automatic SSL.
-[certificatesResolvers.myresolver.acme]
-  email = "peter.zandbergen@myhops.com"
-  storage = "/etc/traefik/acme.json"
-  [certificatesResolvers.myresolver.acme.httpChallenge]
-    entryPoint = "web"
+# [certificatesResolvers.myresolver.acme]
+#   email = "peter.zandbergen@myhops.com"
+#   storage = "/etc/traefik/acme.json"
+#   [certificatesResolvers.myresolver.acme.httpChallenge]
+#     entryPoint = "web"
 
 
 [providers.docker]
