@@ -13,7 +13,7 @@ dashboard = true
   [entryPoints.websecure]
     address = ":443"
 
-    [entryPoints.websecure.http.tls]
+    [entryPoints.websecure.tls]
       certResolver = "myresolver"
 
 [retry]
