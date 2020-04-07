@@ -1,0 +1,10 @@
+debug = false
+
+logLevel = "ERROR"
+# defaultEntryPoints = ["https","http"]
+
+[providers.docker]
+defaultRule = "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
+
+[api]
+insecure = true

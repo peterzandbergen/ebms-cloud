@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+  traefik:
+    image: traefik:v2.0
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+    - web
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    - etc-traefik:/etc/traefik
+    container_name: traefik-ebms
+
+networks:
+  web:
+    external: true
+
+volumes:
+  etc-traefik:
+
