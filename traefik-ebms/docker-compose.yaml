@@ -17,7 +17,7 @@ services:
     # Dynamic Configuration
     labels:
     - "traefik.enable=true"
-    - "traefik.http.routers.api.rule=Host(`ebms.myhops.com`) && (PathPrefix(`/api`) || PathPrefix(`/dashboard`)) "
+    - "traefik.http.routers.api.rule=rule="PathPrefix(`/api`) || PathPrefix(`/dashboard`)"
     - "traefik.http.routers.api.service=api@internal"
     - "traefik.http.routers.api.middlewares=auth"
     - "traefik.http.routers.api.tls"
