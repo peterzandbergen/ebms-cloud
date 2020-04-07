@@ -8,11 +8,17 @@ Sequence of steps:
 1. Create traefik with compose
 1. Copy config files to traefik container using docker cp
 1. Create ebms-admin with compose
-1. Copy secrets to conainer using docker cp
+1. Copy secrets to container using docker cp
 1. Start treafik RP with compose start
 1. Start ebms-admin with compose start
 
 ### Commando's
+
+Configure docker client to connect to remote machine
+
+```
+export DOCKER_HOST=ssh://peter_zandbergen_myhops_com@35.204.80.60
+```
 
 https://hub.docker.com/_/traefik
 
@@ -34,7 +40,7 @@ So for traefik we ececute the following commands:
 
 Execute in the correct directory
 ```
-docker-compose create
+docker-compose up --no-start
 docker cp traefik.toml \
     traefik-ebms:/etc/traefik/traefik.toml
 docker-compose start
