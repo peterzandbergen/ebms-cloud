@@ -13,17 +13,17 @@ dashboard = true
   [entryPoints.websecure]
     address = ":443"
 
+    [entryPoints.websecure.http.tls]
+      certResolver = "myresolver"
+
 [retry]
 
-[docker]
-endpoint = "unix:///var/run/docker.sock"
-domain = "ebms.myhops.com"
-watch = true
-exposedByDefault = false
-
-# [providers.docker]
-# defaultRule = "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
-
+[providers.docker]
+  endpoint = "unix:///var/run/docker.sock"
+  watch = true
+  exposedByDefault = true
+  swarmMode = false
+  # defaultRule = "Host(`{{ trimPrefix `/` .Name }}.docker.localhost`)"
 
 # Enable ACME (Let's Encrypt): automatic SSL.
 [certificatesResolvers.myresolver.acme]
