@@ -24,7 +24,7 @@ services:
     - "traefik.http.routers.api.tls.certresolver=myresolver"
     # - "traefik.http.routers.api.tls.domains.main=myhops.com"
     # - "traefik.http.routers.api.tls.domains.sans=ebms.myhops.com"
-    - "traefik.http.middlewares.auth.basicauth.users=test:$$apr1$$H6uskkkW$$IgXLP6ewTrSuBkTrqE8wj/,test2:$$apr1$$d9hr9HBB$$4HxwgUir3HP4EsggP/QNo0"
+    - "traefik.http.middlewares.auth.basicauth.users=peza:$apr1$YjIRsK60$x1RzbOoZKOxjfXVa4j3jz0"
 
 networks:
   web:
