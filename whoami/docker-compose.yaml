@@ -9,10 +9,9 @@ services:
     - web
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.whoami.rule=Host(`ebms.myhops.com`) && PathPrefix(`/whoami`)"
-      - "traefik.http.routers.whoami.entrypoints=web"
-      - "traefik.http.routers.whoami.service=simple-service"
-      # - "traefik.http.routers.whoami.tls.certresolver=myresolver"
+      - "traefik.http.routers.whoami.rule=Host(`ebms.myhops.com`) && Path(`/whoami`)"
+      - "traefik.http.routers.whoami.tls=true"
+      - "traefik.http.routers.whoami.tls.certresolver=myresolver"
 
 networks:
   web:
